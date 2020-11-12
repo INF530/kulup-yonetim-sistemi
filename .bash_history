@@ -477,3 +477,132 @@ yii version
 cd YiiHello
 ls
 exit
+ls
+git clone https://github.com/username/repo.git
+git commit "lutfen pushla"
+git --globar user.name "Þevval Arslan"
+git --global user.name "Þevval Arslan"
+git config --global user.name "Þevval Arslan"
+git config --global user.email "arslansevval@github.com"
+git remote add sevval
+git branch
+git push origin master
+git commit -m "initial commit"
+git add --all
+git commit -m "initial commit"
+git push origin master
+git push origin sevval
+ls
+ls kulup-yonetim-sistemi
+exit
+git push origin sevval
+git commit -m "Uygulama için il commit mesaj"
+git push origin sevval
+git push origin busra
+git add -all
+git add --all
+git commit -m "Uygulama için il commit mesaj"
+git push origin sevval
+git add --all
+git commit -m "Uygulama için il commit mesaj"
+git status
+git add
+git add -a
+git add --a
+git status
+git commit -m "Uygulama için il commit mesaj"
+git push origin sevval
+git push origin busra
+sudo adduser git
+su git
+cd
+mkdir .ssh && chmod 700.ssh
+touch .ssh/autheroized_keys && chmod 600 .ssh/authorized_keys
+touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+cat C:\Users\kemal\.ssh
+cat /tmp/id_rsa..pub
+cat /tmp/
+cd tmp
+cd /temp/
+mkdir .ssh
+sudo mkdir .ssh
+cat .ssh
+cat .ssh/
+cat .ssh/id_rsa.pub
+sudo cat .ssh/
+sudo cat .ssh/id_rsa.pub
+su git
+ls
+cd deneme
+ls
+git init
+git commit
+git clone git@github.com:kemalberkeak10/202.git
+git commit
+git clone git@github.com:kemalberkeak10/202.git
+git clone git@github.com:kemalberkeak10/kulup-yonetim-sistemi.git
+ssh-agent -s
+ssh-add ~/.ssh/id_rsa
+git remote -v
+git remote set-url origin git@github.com:kemalberkeak10/kulup-yonetim-sistemi.git
+git clone git@github.com:kemalberkeak10/202.git
+git clone https://github.com/kemalberkeak10/202.git
+ls
+cd
+ls
+delete deneme
+rm -rf deneme
+ls
+apt-get install git git-sh
+su apt-get install git git-sh
+sudo apt-get install git git-sh
+mkdir -p /var/services/git
+sudo mkdir -p /var/services/git
+mkdir /var/services/git/.ssh
+sudo mkdir /var/services/git/.ssh
+sudo cd /var/services/git/.ssh
+cd /var/services/git/.ssh
+touch authorized_keys
+sudo touch authorized_keys
+sudo touch authorized_keys2
+chmod 700 /var/services/git/.ssh
+sudo chmod 700 /var/services/git/.ssh
+sudo chown -R git /var/services/git/.ssh
+sudo chmod 600 authorized_keys
+sudo chmod 600 authorized_keys2
+sudo mkdir -p /var/services/git/proje.git
+cd /var/services/git/proje.git
+git init --bare
+sudo git init --bare
+sudo chmod 770 -R .
+sudo chown -R git .
+cd
+ls
+git clone git@github.com:kemalberkeak10/202.git
+sudo git@github.com:kemalberkeak10/202.git
+sudo clone  git@github.com:kemalberkeak10/202.git
+sudo clone git@github.com:kemalberkeak10/202.git
+clone git@github.com:kemalberkeak10/202.git
+sudo git clone git@github.com:kemalberkeak10/202.git
+ls
+cd mdkri
+cd mkdir
+ls
+cd
+cd sduo
+cd sudo
+ls
+cd
+ls
+cd YiiHello
+ls
+cd
+ls
+git clone git@github.com:kemalberkeak10/202.git
+git config
+git remote add origin git@github.com:kemalberkeak10/kulup-yonetim-sistemi.git
+git remote
+git push -u origin master
+git push origin master --force
+git remote add origin https://github.com/kemalberkeak10/kulup-yonetim-sistemi.git
+git push origin master --force
