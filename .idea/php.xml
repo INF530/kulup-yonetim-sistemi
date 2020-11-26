@@ -24,7 +24,6 @@
       <path value="$PROJECT_DIR$/basic/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/basic/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/basic/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/basic/vendor/codeception/module-asserts" />
       <path value="$PROJECT_DIR$/basic/vendor/symfony/console" />
@@ -78,6 +77,13 @@
       <path value="$PROJECT_DIR$/basic/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/basic/vendor/bower-asset/slick-carousel" />
       <path value="$PROJECT_DIR$/basic/vendor/evgeniyrru/yii2-slick" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/basic/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
 </project>
