@@ -38,14 +38,14 @@ $this->beginContent('@app/views/layouts/main.php'); ?>
             <!--            TODO: Gerekli linklerin yerleştirilmesi ve gerekli objeler ile çalışması-->
             <!-- Nav Item - Events -->
             <li class="nav-item active">
-                <a class="nav-link" href="/events/index">
+                <a class="nav-link" href="/events/index?id=1">
                     <i class="far fa-calendar-alt"></i>
                     <span>Etkinlikler</span></a>
             </li>
 
             <!-- Nav Item - Statistics -->
             <li class="nav-item active">
-                <a class="nav-link" href="/kulup/istatistikler">
+                <a class="nav-link" href="/kulup/istatistikler?id=1">
                     <i class="fas fa-chart-line"></i>
                     <span>İstatistikler</span></a>  <!--TODO-->
             </li>
