@@ -78,61 +78,77 @@
             </div>
             <hr>
             <div class="filter-platform">
-                <button type="submit" class="btn m-btn--pill btn-info" href="#"><strong>Etkinlik
-                        Türü</strong></button>
-
                 <button type="submit" class="btn m-btn--pill    btn btn-outline-info"
-                        onclick="location.href='istatikler_1.php'">Etkinlik Sayısı
+                        onclick="window.location='istatistikler.php'">Etkinlik Türü
                 </button>
-
-
                 <button type="submit" class="btn m-btn--pill    btn btn-outline-info"
-                        onclick="window.location='istatistikler_2.php'">Aktif Kulüp Sayısı
+                        onclick="window.location='istatistikler_1.php'">Aylara Göre Etkinlik Sayıları
                 </button>
-
+                <button type="submit" class="btn m-btn--pill    btn btn-info"><strong>Aktif Kulüp Sayısı</strong>
+                </button>
             </div>
             <hr>
             <div class="tablo-platform">
-                <div id="container"></div>
+                <div class="alert alert" role="alert">
+                    Aktif Kulüp Sayısı: 29
+                </div>
+                <table id="example-table" class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th style="width: 2%;"></th>
+                        <th style="width: 10%;">Logo</th>
+                        <th style="width: 30%;">Kulüp Adı</th>
+                        <th style="width: 25%;">Danışman ve Danışman Yardımcısı</th>
+                        <th style="width: 25%;">Başkanı</th>
+                        <th style="width: 7%;text-align: center;">Üye Sayısı</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td style="text-align: center;"><a href="#"><img class="img-circle" title="Informatix"
+                                                                         src="kuluplogolar/1.jpg" height="50"
+                                                                         width="50"></a></td>
+                        <td><strong><a href="#" id="kulupisim" style="color: BLACK">Informatix</a></strong><br>Lorem
+                            ipsum dolor sit amet
+                        </td>
+                        <td><strong><a href="#" id="danisman" style="color: BLACK">Dr. Öğr. Üyesi Canan
+                                    YILDIZ</a></strong></td>
+                        <td><strong><a href="#" id="baskan" style="color: BLACK">Deniz Mert Tecimer</a></strong></td>
+                        <td style="text-align: center;"><strong>23</strong></td>
+                    <tr>
+                        <td>2</td>
+                        <td style="text-align: center;"><a href="#"><img class="img-circle" title="Taü Gönüllüleri"
+                                                                         src="kuluplogolar/gonulluler.jpg" height="50"
+                                                                         width="50"></a></td>
+                        <td><strong><a href="#" id="kulupisim" style="color: BLACK">Taü Gönüllüleri</a></strong><br>Lorem
+                            ipsum dolor sit amet
+                        </td>
+                        <td><strong><a href="#" id="danisman" style="color: BLACK">Dr. Öğr. Üyesi Neşe ARAL</a></strong>
+                        </td>
+                        <td><strong><a href="#" id="baskan" style="color: BLACK">Bicem Bülbün</a></strong></td>
+                        <td style="text-align: center;"><strong>23</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td style="text-align: center;"><a href="#"><img class="img-circle" title="Lorem ipsum"
+                                                                         src="kuluplogolar/probonohukuk.png" height="50"
+                                                                         width="50"></a></td>
+                        <td><strong><a href="#" id="kulupisim" style="color: BLACK">Pro Bono Hukuk</a></strong><br>Lorem
+                            ipsum dolor sit amet
+                        </td>
+                        <td><strong><a href="#" id="danisman" style="color: BLACK">Dr. Öğr. Üyesi Efe
+                                    DIRENİSA</a></strong></td>
+                        <td><strong><a href="#" id="baskan" style="color: BLACK">Merve Balta</a></strong></td>
+                        <td style="text-align: center;"><strong>23</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
     </body>
-    <script>
-
-        anychart.onDocumentReady(function () {
-            // set chart theme
-            anychart.theme('pastel');
-            // create pie chart with passed data
-            var chart = anychart.pie([
-                ['Mesleki', 6371664],
-                ['Kültürel', 7216301],
-                ['Sosyal', 1486621]
-            ]);
-
-            // set chart title text settings
-            chart
-                .title('ACME Corp. apparel sales through different retail channels')
-                // set chart radius
-                .radius('43%')
-                // create empty area in pie chart
-                .innerRadius('30%');
-
-            // set container id for the chart
-            chart.container('container');
-            // initiate chart drawing
-            chart.draw();
-        });
-
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-            crossorigin="anonymous"></script>
 
 </html>
-
-</div>

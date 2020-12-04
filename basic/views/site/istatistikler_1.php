@@ -25,7 +25,7 @@
         <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
         <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
         <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
-        <script src="https://cdn.anychart.com/releases/v8/themes/pastel.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/themes/sea.min.js"></script>
         <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
         <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css"
               rel="stylesheet">
@@ -46,6 +46,7 @@
     <div class="statistic-main">
         <div class="statistic-platform">
             <div class="statistic-header"><span>
+
                     <div>Kulüp Seç</div>
                     <div>
                         <div class="input-group">
@@ -73,26 +74,25 @@
                         </div>
                     </div>
                 </span><span>
-                    <div><button type="button" class="btn btn-secondary ">Sonuçları Getir</button></div>
+                    <div><button type="button" class="btn btn-light ">Sonuçları Getir</button></div>
                 </span>
             </div>
             <hr>
             <div class="filter-platform">
-                <button type="submit" class="btn m-btn--pill btn-info" href="#"><strong>Etkinlik
-                        Türü</strong></button>
-
                 <button type="submit" class="btn m-btn--pill    btn btn-outline-info"
-                        onclick="location.href='istatikler_1.php'">Etkinlik Sayısı
+                        onclick="window.location='istatistikler.php'">Etkinlik Türü
                 </button>
-
-
+                <button type="submit" class="btn m-btn--pill    btn btn-primary"><strong>Aylara Göre Etkinlik
+                        Sayıları</strong></button>
                 <button type="submit" class="btn m-btn--pill    btn btn-outline-info"
                         onclick="window.location='istatistikler_2.php'">Aktif Kulüp Sayısı
                 </button>
-
             </div>
             <hr>
             <div class="tablo-platform">
+                <div class="alert alert-cyan" role="alert">
+                    Toplam Kayıt Sayısı: 38
+                </div>
                 <div id="container"></div>
             </div>
         </div>
@@ -102,25 +102,59 @@
     <script>
 
         anychart.onDocumentReady(function () {
+
             // set chart theme
-            anychart.theme('pastel');
-            // create pie chart with passed data
-            var chart = anychart.pie([
-                ['Mesleki', 6371664],
-                ['Kültürel', 7216301],
-                ['Sosyal', 1486621]
-            ]);
+            anychart.theme('sea');
+            // create column chart
+            var chart = anychart.column();
+
+            // turn on chart animation
+            chart.animation(true);
 
             // set chart title text settings
-            chart
-                .title('ACME Corp. apparel sales through different retail channels')
-                // set chart radius
-                .radius('43%')
-                // create empty area in pie chart
-                .innerRadius('30%');
+            chart.title('Aylara Göre Öğrenci Kulüpleri Etkinlik Sayısı(Genel)');
+
+            // create area series with passed data
+            var series = chart.column([
+                ['Eyl', '0'],
+                ['Ekm', '7'],
+                ['Kas', '13'],
+                ['Ara', '10'],
+                ['Oca', '8'],
+                ['Şub', '0'],
+                ['Mar', '0'],
+                ['Nis', '0'],
+                ['May', '0']
+            ]);
+
+            // set series tooltip settings
+            series.tooltip().titleFormat('{%X}');
+
+            series
+                .tooltip()
+                .position('center-top')
+                .anchor('center-bottom')
+                .offsetX(0)
+                .offsetY(5)
+                .format('{%Value}{groupsSeparator: }');
+
+            // set scale minimum
+            chart.yScale().minimum(0);
+
+            // set yAxis labels formatter
+            chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
+
+            // tooltips position and interactivity settings
+            chart.tooltip().positionMode('point');
+            chart.interactivity().hoverMode('by-x');
+
+            // axes titles
+            chart.xAxis().title('Aylar');
+            chart.yAxis().title('Etkinlik Sayısı');
 
             // set container id for the chart
             chart.container('container');
+
             // initiate chart drawing
             chart.draw();
         });
@@ -134,5 +168,3 @@
             crossorigin="anonymous"></script>
 
 </html>
-
-</div>

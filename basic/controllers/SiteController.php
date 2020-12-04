@@ -73,6 +73,12 @@ class SiteController extends Controller
         return $this->render('istatistikler');
     }
 
+    public function actionIstatistikMenu()
+    {
+        $this->layout = 'main';
+        return $this->render('istatistikler_1');
+    }
+
     /**
      * Login action.
      *
