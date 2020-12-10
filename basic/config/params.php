@@ -1,7 +1,17 @@
 <?php
+/*
+user tablosunda 
 
+googleID
+
+isimli varchar 255 alan açılması lazım
+
+
+*/
 return [
-    'adminEmail' => 'admin@example.com',
-    'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
+    'allowDomain'=>[
+      //  'gmail.com',
+        'ogr.iu.edu.tr'
+        ],
 ];
+
