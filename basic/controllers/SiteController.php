@@ -8,6 +8,8 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
+use app\components\AuthHandler;
+use yii\authclient\Google;
 
 class SiteController extends Controller
 {
@@ -53,9 +55,16 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'onAuthSuccess'],
+            ],
         ];
     }
-
+    public function onAuthSuccess($client)
+    {
+        (new AuthHandler($client))->handle();
+    }
     /**
      * Displays homepage.
      *
@@ -71,12 +80,6 @@ class SiteController extends Controller
     {
         $this->layout = 'main';
         return $this->render('istatistikler');
-    }
-
-    public function actionIstatistikMenu()
-    {
-        $this->layout = 'main';
-        return $this->render('istatistikler_1');
     }
 
     /**
