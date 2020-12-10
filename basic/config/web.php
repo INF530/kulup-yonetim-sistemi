@@ -66,7 +66,20 @@ $config = [
                 'd/<action>' => 'dashboard/<action>'
             ],
         ],
-
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            // all Auth clients will use this configuration for HTTP client:
+            'httpClient' => [
+                'transport' => 'yii\httpclient\CurlTransport',
+            ],
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\Google',
+                    'clientId' => 'client ID',
+                    'clientSecret' => 'Client Secret',
+                ],
+            ],
+        ],  
     ],
     'params' => $params,
 ];
