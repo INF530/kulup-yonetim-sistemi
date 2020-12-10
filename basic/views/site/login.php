@@ -31,6 +31,18 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
+								
+<?php
+if(isset(yii::$app->session->get('loginFail')[0]))
+{
+	echo yii::$app->session->get('loginFail')[0];
+    yii::$app->session->remove('loginFail'); 
+}
+?>
+								
+								
+								
+								
                                     <div class="text-center">
                                         <h1 class="h1 text-gray-900 mb-4">Giriş</h1>
                                     </div>
@@ -58,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <div class="form-group">
                                             <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-user btn-block', 'name' => 'login-button']) ?>
                                         </div>
-
+<?= Html::a('Google', ['auth?authclient=google'], ['class' => 'btn btn-block bg-gradient-danger btn-lg']) ?>
                                         <div class="form-group">
                                             <?= Html::submitButton('<i class="fab fa-google fa-fw"></i> Login', ['class' => 'btn btn-google btn-user btn-block', 'name' => 'login-button']) ?>
                                         </div>
