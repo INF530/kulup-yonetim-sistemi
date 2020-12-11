@@ -84,6 +84,22 @@
       <path value="$PROJECT_DIR$/basic/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/basic/vendor/yiisoft/yii2-authclient" />
+      <path value="$PROJECT_DIR$/basic/vendor/yiisoft/yii2-httpclient" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/basic/vendor/yiisoft/yii2-swiftmailer" />
+      <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/basic/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/basic/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-select2" />
+      <path value="$PROJECT_DIR$/basic/vendor/select2/select2" />
+      <path value="$PROJECT_DIR$/basic/vendor/dektrium/yii2-user" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-krajee-base" />
+      <path value="$PROJECT_DIR$/basic/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/basic/vendor/dektrium/yii2-rbac" />
+      <path value="$PROJECT_DIR$/basic/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/basic/vendor/doctrine/lexer" />
     </include_path>
   </component>
 </project>

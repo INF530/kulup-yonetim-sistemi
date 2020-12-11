@@ -37,29 +37,37 @@ AppAsset::register($this);
         ],
     ]);
 
+    $items = [
+        ['label' => 'Anasayfa', 'url' => ['/site/index']],
+        ['label' => 'Kulüpler', 'url' => ['/kulup/index']],
+        ['label' => 'İstatistikler', 'url' => ['/site/istatistikler']],
+        Yii::$app->user->isGuest ? (
+        ['label' => 'Giriş yap', 'url' => ['/user/login']]
+        ) : (
+
+        ['label' => ucfirst(Yii::$app->user->identity->username),
+            'items' => [
+                ['label' => 'Kulüplerim', 'url' => '/kayitli-kulupler'],
+                ['label' => 'Profil', 'url' => '/user/settings/profile'],
+                ['label' => Html::tag('div', '<div class="float-left"><p class="float-left my-auto">Bildirimler</p></div><div class="rounded ml-auto bg-danger text-white"><small><h9 class="my-auto px-1">10</h9></small></div>', ['class' => 'd-flex my-auto']), 'url' => '/user/notifications',],
+                ['label' => 'Çıkış yap',
+                    'url' => ['/user/logout'],
+                    'linkOptions' => [
+                        'data-method' => 'post'
+                    ]]
+            ],
+        ]
+        )
+    ];
+
+    if (Yii::$app->user->can('admin')) {
+        echo "asdasdasdasdasd";
+    }
+
     try {
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav ml-auto align-content-right text-center'],
-            'items' => [
-                ['label' => 'Anasayfa', 'url' => ['/site/index']],
-                ['label' => 'Kulüpler', 'url' => ['/kulup/index']],
-                ['label' => 'İstatistikler', 'url' => ['/site/istatistikler']],
-                Yii::$app->user->isGuest ? (
-                ['label' => 'Giriş yap', 'url' => ['/site/login']]
-                ) : (
-
-                ['label' => ucfirst(Yii::$app->user->identity->username),
-                    'items' => [['label' => 'Kulüplerim', 'url' => '/kayitli-kulupler'],
-                        ['label' => Html::tag('div', '<div class="float-left"><p class="float-left my-auto">Bildirimler</p></div><div class="rounded ml-auto bg-danger text-white"><small><h9 class="my-auto px-1">10</h9></small></div>', ['class' => 'd-flex my-auto']), 'url' => '/user/notifications',],
-                        ['label' => 'Çıkış yap',
-                            'url' => ['site/logout'],
-                            'linkOptions' => [
-                                'data-method' => 'post'
-                            ]]
-                    ],
-                ]
-                )
-            ],
+            'items' => $items,
             'encodeLabels' => false
         ]);
     } catch (Exception $e) {

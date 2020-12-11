@@ -1,5 +1,8 @@
 <?php
 
+use yii\authclient\Collection;
+use yii\bootstrap4\BootstrapAsset;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
@@ -9,9 +12,9 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
-    'language' => 'tr-TR',
+    'language' => 'tr_TR',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -48,7 +51,7 @@ $config = [
 
         'assetManager' => [
             'bundles' => [
-                \yii\bootstrap4\BootstrapAsset::class => [
+                BootstrapAsset::class => [
                     'css' => [
                         '/css/sb-admin-2.min.css',
                         'css/site.css'
@@ -66,7 +69,54 @@ $config = [
                 'd/<action>' => 'dashboard/<action>'
             ],
         ],
-
+        'authClientCollection' => [
+            'class' => Collection::className(),
+            'clients' => [
+                'google' => [
+                    'class' => 'dektrium\user\clients\Google',
+                    'clientId' => '615370623865-frk1an49jhqsi7t3tbrfu12o2rtbssic.apps.googleusercontent.com',
+                    'clientSecret' => 'pqUqyx5dKs9qyLza7fCarABf'
+                ],
+                /*'facebook' => [
+                    'class'        => 'dektrium\user\clients\Facebook',
+                    'clientId'     => 'APP_ID',
+                    'clientSecret' => 'APP_SECRET',
+                ],
+                'twitter' => [
+                    'class'          => 'dektrium\user\clients\Twitter',
+                    'consumerKey'    => 'CONSUMER_KEY',
+                    'consumerSecret' => 'CONSUMER_SECRET',
+                ],
+                'github' => [
+                    'class'        => 'dektrium\user\clients\GitHub',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET',
+                ],
+                'yandex' => [
+                    'class'        => 'dektrium\user\clients\Yandex',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET'
+                ],
+                'linkedin' => [
+                    'class'        => 'dektrium\user\clients\LinkedIn',
+                    'clientId'     => 'CLIENT_ID',
+                    'clientSecret' => 'CLIENT_SECRET'
+                ],*/
+            ],
+        ],
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+        ],
+    ],
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'enableUnconfirmedLogin' => true,
+            'confirmWithin' => 21600,
+            'cost' => 12,
+            'admins' => ['admin'],
+            'viewPath' => '@app/views/user',
+        ],
     ],
     'params' => $params,
 ];
