@@ -32,7 +32,6 @@
       <path value="$PROJECT_DIR$/basic/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/basic/vendor/codeception/verify" />
       <path value="$PROJECT_DIR$/basic/vendor/codeception/codeception" />
-      <path value="$PROJECT_DIR$/basic/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/basic/vendor/codeception/stub" />
       <path value="$PROJECT_DIR$/basic/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/basic/vendor/phpspec/php-diff" />
@@ -95,11 +94,23 @@
       <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-select2" />
       <path value="$PROJECT_DIR$/basic/vendor/select2/select2" />
       <path value="$PROJECT_DIR$/basic/vendor/dektrium/yii2-user" />
-      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-krajee-base" />
       <path value="$PROJECT_DIR$/basic/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/basic/vendor/dektrium/yii2-rbac" />
       <path value="$PROJECT_DIR$/basic/vendor/bower-asset/bootstrap" />
       <path value="$PROJECT_DIR$/basic/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/basic/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/basic/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/basic/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/basic/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/basic/vendor/google/apiclient" />
+      <path value="$PROJECT_DIR$/basic/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/basic/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/basic/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/basic/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/basic/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/basic/vendor/google/apiclient-services" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-krajee-base" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />
 </project>

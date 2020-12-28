@@ -114,7 +114,8 @@ $config = [
             'enableUnconfirmedLogin' => true,
             'confirmWithin' => 21600,
             'cost' => 12,
-            'admins' => ['admin'],
+            'admins' => ['tugbaoguncmert', 'Resulknc'],
+
             'viewPath' => '@app/views/user',
         ],
     ],
